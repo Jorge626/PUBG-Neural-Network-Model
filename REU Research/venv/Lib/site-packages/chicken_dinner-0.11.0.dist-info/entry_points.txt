@@ -1,0 +1,3 @@
+[console_scripts]
+chicken-dinner=chicken_dinner.cli:cli
+
