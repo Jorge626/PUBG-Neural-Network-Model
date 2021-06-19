@@ -1,4 +1,5 @@
 from chicken_dinner.pubgapi import PUBG
+import csv
 
 
 # Displays player info
@@ -38,8 +39,8 @@ def get_squad_stats(player):
         print("{0}: {1}".format(key, value))
 
 
-# Displays season match ID's & returns latest match ID
-def get_season_solo_match_ids(player, season):
+# Displays solo season match ID's fpp & returns latest match ID
+def get_season_solo_match_ids_fpp(player, season):
     player_season = season.get_player(player.id)
     it = 0
     print("Solo Match IDS\n~~~~~~~~~~~~~~")
@@ -48,6 +49,42 @@ def get_season_solo_match_ids(player, season):
         it += 1
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     return player_season.match_ids("solo", "fpp")[0]
+
+
+# Displays solo season match tpp ID's & returns latest match ID
+def get_season_solo_match_ids_tpp(player, season):
+    player_season = season.get_player(player.id)
+    it = 0
+    print("Solo Match IDS\n~~~~~~~~~~~~~~")
+    for ids in player_season.match_ids("solo", "tpp"):
+        print("ID {0}: {1}".format(it, ids))
+        it += 1
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    return player_season.match_ids("solo", "tpp")[0]
+
+
+# Displays solo seasons match ID's for both fpp and tpp and returns latest match ID
+def get_season_solo_match_ids(player, season):
+    player_season = season.get_player(player.id)
+    it = 0
+    print("Solo Match IDS\n~~~~~~~~~~~~~~")
+    for ids in player_season.match_ids("solo"):
+        print("ID {0}: {1}".format(it, ids))
+        it += 1
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    return player_season.match_ids("solo")[0]
+
+
+# Displays season match ID's & returns latest match ID
+def get_season_duo_match_ids(player, season):
+    player_season = season.get_player(player.id)
+    it = 0
+    print("Duo Match IDS\n~~~~~~~~~~~~~~")
+    for ids in player_season.match_ids("duo", "fpp"):
+        print("ID {0}: {1}".format(it, ids))
+        it += 1
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    return player_season.match_ids("duo", "fpp")[0]
 
 
 # Displays match info
@@ -72,7 +109,7 @@ def get_telemetry_info(telemetry):
     print("Match Info\n~~~~~~~~~~")
     print("All event types: {0}".format(telemetry.event_types()))
     # Can filter by any event, this case I filter by care package for example
-    care_package_spawn = telemetry.filter_by("log_care_package_spawn")
+    care_package_spawn = telemetry.filter_by("log_player_position")
     print("Care Package Spawn: {0}".format(care_package_spawn))
     print("Telemetry Map ID: {0}".format(telemetry.map_id()))
     print("Telemetry Map Name: {0}".format(telemetry.map_name()))
@@ -121,22 +158,64 @@ def get_objects_info(telemetry):
 def create_playback(telemetry):
     print("Creating playback...")
     telemetry.playback_animation(
-        "match_playback.html",
+        "match_playback3.html",
         zoom=True,
         labels=True,
-        label_players=["Oogie_"],
+        label_players=["Oogie_", "Thats_Schnic3"],
         highlight_winner=True,
         label_highlights=True,
         size=6,
         end_frames=60,
         use_hi_res=False,
-        color_teams=False,  # use True for teams, False for solos
+        color_teams=True,  # use True for teams, False for solos
         interpolate=True,
         damage=True,
         interval=2,
         fps=30,
     )
     print("Playback created!")
+
+
+# Creates a csv file of player positions given telemetry object
+def player_position_csv(telemetry):
+    new_file = open('csv_player_pos.csv', 'w', newline='')
+    csv_header = ['timestamp']
+    for i in range(1, 102):
+        csv_header.append('player{0}_x'.format(i))
+        csv_header.append('player{0}_y'.format(i))
+        csv_header.append('player{0}_z'.format(i))
+
+    csv_writer = csv.DictWriter(new_file, fieldnames=csv_header, restval="")
+
+    player_positions = telemetry.filter_by("log_player_position")
+    characters = []
+    timestamps = []
+    for players in player_positions:
+        current_character_name = players.character.name
+        if current_character_name not in characters:
+            characters.append(current_character_name)
+        timestamp = players.timestamp[:19]
+        if timestamp not in timestamps:
+            timestamps.append(timestamp)
+            csv_writer.writerow({'timestamp': timestamp})
+
+    new_file.close()
+    csv_reader = csv.reader(open('csv_player_pos.csv'))
+    csv_list = list(csv_reader)
+
+    for timestamp in timestamps:
+        for players in player_positions:
+            if players.timestamp[:19] == timestamp:
+                character_name = players.character.name
+                character_index = characters.index(character_name)
+                start_index = (character_index * 2) + (character_index + 1)
+                time_index = timestamps.index(timestamp)
+                csv_list[time_index][start_index] = character_name + '_x:' + str(players.character.location.x)
+                csv_list[time_index][start_index + 1] = character_name + '_y:' + str(players.character.location.y)
+                csv_list[time_index][start_index + 2] = character_name + '_z:' + str(players.character.location.z)
+
+    csv_writer = csv.writer(open('csv_player_pos.csv', 'w', newline=''))
+    csv_writer.writerows(csv_list)
 
 
 def main():
@@ -149,19 +228,22 @@ def main():
               "yIn0.uZbZugduaGpgeVvSZ2Of4e9k7qMZm-C" \
               "kKKcZW2R_aAM "
     pubg = PUBG(api_key, "pc-na")
-    players = pubg.players_from_names(["Oogie_", "shroud"])
+    players = pubg.players_from_names(["Oogie_"])
     Oogie_ = players[0]
-    get_player_info(Oogie_)
-    get_solo_stats(Oogie_)
+    # get_player_info(Oogie_)
+    # get_solo_stats(Oogie_)
     current_season = pubg.current_season()
-    match_id = get_season_solo_match_ids(Oogie_, current_season)
+    # match_id = get_season_solo_match_ids(Oogie_, current_season)
+    # match_id = get_season_solo_match_ids_tpp(Oogie_, current_season)
+    match_id = get_season_duo_match_ids(Oogie_, current_season)
     match = pubg.match(match_id)
-    get_match_id_info(match)
+    # get_match_id_info(match)
     telemetry = match.get_telemetry()
-    get_telemetry_info(telemetry)
-    get_events_info(telemetry)
-    get_objects_info(telemetry)
-    create_playback(telemetry)
+    # get_telemetry_info(telemetry)
+    # get_events_info(telemetry)
+    # get_objects_info(telemetry)
+    # create_playback(telemetry)
+    player_position_csv(telemetry)
 
 
 if __name__ == "__main__":
