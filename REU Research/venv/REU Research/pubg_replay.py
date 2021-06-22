@@ -1,5 +1,7 @@
 from chicken_dinner.pubgapi import PUBG
 import csv
+import pandas as pd
+import matplotlib.pyplot as plt
 
 
 # Displays player info
@@ -178,7 +180,8 @@ def create_playback(telemetry):
 
 # Creates a csv file of player positions given telemetry object
 def player_position_csv(telemetry):
-    new_file = open('csv_player_pos.csv', 'w', newline='')
+    csv_file_name = 'csv_player_pos.csv'
+    new_file = open(csv_file_name, 'w', newline='')
     csv_header = ['timestamp']
     for i in range(1, 102):
         csv_header.append('player{0}_x'.format(i))
@@ -186,6 +189,7 @@ def player_position_csv(telemetry):
         csv_header.append('player{0}_z'.format(i))
 
     csv_writer = csv.DictWriter(new_file, fieldnames=csv_header, restval="")
+    csv_writer.writeheader()
 
     player_positions = telemetry.filter_by("log_player_position")
     characters = []
@@ -200,7 +204,7 @@ def player_position_csv(telemetry):
             csv_writer.writerow({'timestamp': timestamp})
 
     new_file.close()
-    csv_reader = csv.reader(open('csv_player_pos.csv'))
+    csv_reader = csv.reader(open(csv_file_name))
     csv_list = list(csv_reader)
 
     for timestamp in timestamps:
@@ -209,13 +213,58 @@ def player_position_csv(telemetry):
                 character_name = players.character.name
                 character_index = characters.index(character_name)
                 start_index = (character_index * 2) + (character_index + 1)
-                time_index = timestamps.index(timestamp)
+                time_index = timestamps.index(timestamp) + 1
                 csv_list[time_index][start_index] = character_name + '_x:' + str(players.character.location.x)
                 csv_list[time_index][start_index + 1] = character_name + '_y:' + str(players.character.location.y)
                 csv_list[time_index][start_index + 2] = character_name + '_z:' + str(players.character.location.z)
 
-    csv_writer = csv.writer(open('csv_player_pos.csv', 'w', newline=''))
+    csv_writer = csv.writer(open(csv_file_name, 'w', newline=''))
     csv_writer.writerows(csv_list)
+    return csv_file_name
+
+
+# Updates csv file so that the csv file has previous known player positions
+def update_player_positions(file_name):
+    csv_reader = csv.reader(open(file_name))
+    csv_list = list(csv_reader)
+
+    for rows in range(2, len(csv_list)):
+        for columns in range(len(csv_list[rows])):
+            if csv_list[rows][columns] == '' and csv_list[rows - 1][columns] != '':
+                csv_list[rows][columns] = csv_list[rows - 1][columns]
+
+    csv_writer = csv.writer(open(file_name, 'w', newline=''))
+    csv_writer.writerows(csv_list)
+
+
+def plot_player(file_name, player_num):
+    start_index = (player_num * 2) + (player_num + 1)
+    csv_reader = csv.reader(open(file_name))
+    csv_list = list(csv_reader)
+    x = []
+    y = []
+    char_name = ''
+    for rows in range(1, len(csv_list)):
+        if csv_list[rows][start_index] != '':
+            split = csv_list[rows][start_index].index(':') + 1
+            x_ = csv_list[rows][start_index][split:]
+            y_ = csv_list[rows][start_index + 1][split:]
+            if x_ not in x and y_ not in y:
+                x.append(float(x_))
+                y.append(float(y_))
+            if char_name == '':
+                split = csv_list[rows][start_index].index('_x')
+                char_name = csv_list[rows][start_index][:split]
+
+    plt.style.use('seaborn')
+    plt.xlabel('x-coordinate')
+    plt.ylabel('y-coordinate')
+    plt.title('\'{0}\' Coordinates'.format(char_name))
+    plt.plot(x, y)
+    plt.axvline(0, c='black', ls='--')
+    plt.axhline(0, c='black', ls='--')
+    plt.tight_layout()
+    plt.show()
 
 
 def main():
@@ -243,7 +292,9 @@ def main():
     # get_events_info(telemetry)
     # get_objects_info(telemetry)
     # create_playback(telemetry)
-    player_position_csv(telemetry)
+    csv_file_name = player_position_csv(telemetry)
+    update_player_positions(csv_file_name)
+    plot_player('csv_player_pos.csv', 56)
 
 
 if __name__ == "__main__":

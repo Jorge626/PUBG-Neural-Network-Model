@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea213969-aea1-4349-ad1e-43fb95536799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/csv_player_pos.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/match_playback2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/csv_player_pos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/csv_player_pos.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/pubg_replay.py" beforeDir="false" afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/pubg_replay.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +27,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
@@ -81,6 +82,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/pubg_replay.py</url>
+          <line>222</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -93,6 +101,7 @@
       <configuration name="PythonConfigurationType">
         <watch expression="players_for_timestamp" />
         <watch expression="csv_list" />
+        <watch expression="x" />
       </configuration>
     </watches-manager>
   </component>
