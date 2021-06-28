@@ -2,15 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea213969-aea1-4349-ad1e-43fb95536799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/6_23_21_1458.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/bytes_vs_nearby_players.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/pubg_csv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/pubg_plots.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/csv_player_pos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/csv_player_pos.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/pubg_replay.py" beforeDir="false" afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/pubg_replay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/match_playback.html" beforeDir="false" afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/match_playback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/match_playback2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/pubg_replay.py" beforeDir="false" afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/pubg_info.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,8 +43,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jorge\Documents\GitHub\REU_Project\REU Research\venv\REU Research" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="pubg_replay" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="REU_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -44,7 +62,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/REU Research/venv/REU Research/pubg_replay.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\jorge\Documents\GitHub\REU_Project\REU Research\venv\REU Research\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -82,13 +100,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/pubg_replay.py</url>
-          <line>222</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -99,8 +110,6 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="players_for_timestamp" />
-        <watch expression="csv_list" />
         <watch expression="x" />
       </configuration>
     </watches-manager>
