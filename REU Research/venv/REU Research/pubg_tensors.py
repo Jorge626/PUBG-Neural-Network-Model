@@ -93,4 +93,5 @@ def get_tensors(player_pos_file, network_traffic_file):
 
     x = torch.FloatTensor(final_byte_data)
     y = torch.FloatTensor(final_player_pos)
+    print('X: {0}\nY: {1}'.format(x.size(), y.size()))
     return x, y

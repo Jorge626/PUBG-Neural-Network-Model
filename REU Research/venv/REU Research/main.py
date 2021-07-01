@@ -3,6 +3,7 @@ import pubg_info
 import pubg_csv
 import pubg_plots
 import pubg_tensors
+import preparedata
 
 
 # Main function
@@ -28,10 +29,7 @@ def main():
     # pubg_plots.plot_player('csv_player_pos.csv', 'Oogie_')
     # pubg_plots.plot_bit_len_vs_players('6_23_21_1458.json', 'csv_player_pos.csv', 'Oogie_')
     x, y = pubg_tensors.get_tensors('csv_player_pos.csv', '6_23_21_1458.json')
-    print(x.size())
-    print(x)
-    print(y.size())
-    print(y)
+    preparedata.prepare_data(x, y)
 
 
 if __name__ == "__main__":
