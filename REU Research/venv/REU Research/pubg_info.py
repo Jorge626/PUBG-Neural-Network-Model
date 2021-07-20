@@ -83,6 +83,16 @@ def get_season_duo_match_ids(player, season):
     return player_season.match_ids("duo", "fpp")[0]
 
 
+def get_season_squad_match_ids(player, season):
+    player_season = season.get_player(player.id)
+    it = 0
+    print("Squad Match IDS\n~~~~~~~~~~~~~~")
+    for ids in player_season.match_ids("squad", "fpp"):
+        print("ID {0}: {1}".format(it, ids))
+        it += 1
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    return player_season.match_ids("squad", "fpp")[0]
+
 # Displays match info
 def get_match_id_info(match):
     print("Match Info\n~~~~~~~~~~")

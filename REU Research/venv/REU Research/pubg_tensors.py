@@ -11,6 +11,8 @@ def get_bytes_list(network_traffic_file):
         byte_data = []
         timestamps = []
         for packet in data:
+            if int(packet['_source']['layers']['data']['data.len']) > 756:
+                continue
             timestamp = packet['_source']['layers']['frame']['frame.time'][13:28]
             timestamps.append(timestamp)
             packet_bytes = packet['_source']['layers']['data']['data.data']
@@ -47,9 +49,10 @@ def get_tensors(player_pos_file, network_traffic_file):
 
     player_pos = get_players_pos_list(player_pos_file)
     final_player_pos = []
-    datetime_thresh_max = datetime.timedelta(milliseconds=900)
+    datetime_thresh_max = datetime.timedelta(milliseconds=1000)
     datetime_thresh_min = datetime.timedelta(milliseconds=0)
     it = 0
+    resize_packets = 0
     for timestamp in timestamps:
         hr = int(timestamp[:2])
         mins = int(timestamp[3:5])
@@ -70,8 +73,8 @@ def get_tensors(player_pos_file, network_traffic_file):
             datetime_player = datetime.time(hr, mins, sec, mill)
             datetime_player = datetime.datetime.combine(datetime.date(1, 1, 1), datetime_player)
             time_diff = datetime_key - datetime_player
+            player_pos_row = []
             if datetime_thresh_min <= time_diff <= datetime_thresh_max:
-                player_pos_row = []
                 for i in range(1, 316, 3):
                     if i >= len(player_pos[0]):
                         player_pos_row.append(float(0.0))
@@ -89,9 +92,18 @@ def get_tensors(player_pos_file, network_traffic_file):
             elif time_diff < datetime_thresh_max:
                 break
             it += 1
+        if it == 0 or len(player_pos_row) == 0:
+            resize_packets += 1
+            continue
         final_player_pos.append(player_pos_row)
+
+    if resize_packets > 0:
+        while resize_packets > 0:
+            del final_byte_data[0]
+            del timestamps[0]
+            resize_packets -= 1
 
     x = torch.FloatTensor(final_byte_data)
     y = torch.FloatTensor(final_player_pos)
     print('X: {0}\nY: {1}'.format(x.size(), y.size()))
-    return x, y
+    return x, y, timestamps

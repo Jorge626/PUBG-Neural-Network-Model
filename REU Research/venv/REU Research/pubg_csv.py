@@ -4,8 +4,7 @@ import pytz
 
 
 # Creates a csv file of player positions given telemetry object
-def player_position_csv(telemetry):
-    csv_file_name = 'csv_player_pos.csv'
+def player_position_csv(telemetry, csv_file_name):
     csv_header = ['timestamp']
 
     player_positions = telemetry.filter_by("log_player_position")

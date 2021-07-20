@@ -4,6 +4,7 @@ import pubg_csv
 import pubg_plots
 import pubg_tensors
 import preparedata
+import csv
 
 
 # Main function
@@ -16,20 +17,26 @@ def main():
               "icHViZyIsImFwcCI6Im5zZi1yZXUtcmVzZWF" \
               "yIn0.uZbZugduaGpgeVvSZ2Of4e9k7qMZm-C" \
               "kKKcZW2R_aAM "
-    # pubg = PUBG(api_key, "pc-na")
+    pubg = PUBG(api_key, "pc-na")
+
     # players = pubg.players_from_names(["Oogie_", "V0ida"])
-    # Oogie_ = players[0]
+    # Oogie_ = players[1]
     # current_season = pubg.current_season()
     # match_id = pubg_info.get_season_duo_match_ids(Oogie_, current_season)
-    # match = pubg.match(match_id)
+
+    # match = pubg.match('68722bc8-6749-4337-a6a2-cfff18aafc18')
     # telemetry = match.get_telemetry()
-    # pubg_info.create_playback(telemetry)
-    # csv_file_name = pubg_csv.player_position_csv(telemetry)
-    # pubg_csv.fill_csv(csv_file_name)
-    # pubg_plots.plot_player('csv_player_pos.csv', 'Oogie_')
-    # pubg_plots.plot_bit_len_vs_players('6_23_21_1458.json', 'csv_player_pos.csv', 'Oogie_')
-    x, y = pubg_tensors.get_tensors('csv_player_pos.csv', '6_23_21_1458.json')
-    preparedata.prepare_data(x, y)
+    # pubg_csv.player_position_csv(telemetry, 'PlayerPositions/player_pos_7_19_1348.csv')
+    # pubg_csv.fill_csv('PlayerPositions/player_pos_7_19_1348.csv')
+
+    x, y, timestamps = pubg_tensors.get_tensors('PlayerPositions/player_pos_7_19_1348.csv', 'NetworkPackets/packets_7_19_1348.json')
+
+    # timestamps = preparedata.prepare_data_training(x, y, timestamps)
+    preparedata.prepare_data_valuation(x, y)
+    csv_writer = csv.writer(open('tensor_timestamps.csv', 'w', newline=''))
+    for timestamp in timestamps:
+        csv_writer.writerow([timestamp])
+    print('Timestamps length: {0}'.format(len(timestamps)))
 
 
 if __name__ == "__main__":

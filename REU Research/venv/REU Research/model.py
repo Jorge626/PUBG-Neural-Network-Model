@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as f
 import os
 
 
@@ -11,9 +10,8 @@ class NN(nn.Module):
         self.fc2 = nn.Linear(500, 315)
 
     def forward(self, x):
-        x = f.leaky_relu(self.fc1(x))
-        x = self.fc2(x)
-        return f.log_softmax(x, dim=1)
+        x = torch.sigmoid(self.fc1(x))
+        return self.fc2(x)
 
 
 def load():
