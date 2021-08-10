@@ -93,6 +93,7 @@ def get_season_squad_match_ids(player, season):
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     return player_season.match_ids("squad", "fpp")[0]
 
+
 # Displays match info
 def get_match_id_info(match):
     print("Match Info\n~~~~~~~~~~")
@@ -115,8 +116,8 @@ def get_telemetry_info(telemetry):
     print("Match Info\n~~~~~~~~~~")
     print("All event types: {0}".format(telemetry.event_types()))
     # Can filter by any event, this case I filter by care package for example
-    care_package_spawn = telemetry.filter_by("log_player_position")
-    print("Care Package Spawn: {0}".format(care_package_spawn))
+    phase_change = telemetry.filter_by("log_phase_change")
+    print("Care Package Spawn: {0}".format(phase_change))
     print("Telemetry Map ID: {0}".format(telemetry.map_id()))
     print("Telemetry Map Name: {0}".format(telemetry.map_name()))
     print("Number of Players: {0}".format(telemetry.num_players()))

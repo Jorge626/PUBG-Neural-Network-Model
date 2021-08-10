@@ -2,7 +2,6 @@ import model
 import torch
 import matplotlib.pyplot as plt
 import math
-import numpy as np
 import csv
 import imageio
 import os
@@ -38,10 +37,6 @@ def plot(m, val_x, val_y):
 	val_y = val_y / val_y.max()
 	actual_rows = val_y.tolist()
 
-	xmin, xmax = plt.xlim()
-	ymin, ymax = plt.ylim()
-	plt.xlim(xmin * 1, xmax * 1)
-	plt.ylim(ymin * 1, ymax * 1)
 	plt.style.use('seaborn')
 	plt.xlabel('X Coordinate')
 	plt.ylabel('Y Coordinate')
@@ -55,19 +50,17 @@ def plot(m, val_x, val_y):
 	csv_reader = csv.reader(open('tensor_timestamps.csv'))
 	timestamps = list(csv_reader)
 	for i in range(0, len(pred_rows)):
-		total_actual_coordinates = 105
+		taken_coord = []
 		for j in range(0, len(pred_rows[0]), 3):
 			x_coord = [pred_rows[i][j]]
 			y_coord = [pred_rows[i][j + 1]]
 			smallest_error = 100
 			nearest_x = 100
 			nearest_y = 100
-			taken_coord = []
 			for k in range(0, len(actual_rows[0]), 3):
 				x = actual_rows[i][k]
 				y = actual_rows[i][k + 1]
 				if x == 0.0 and y == 0.0:
-					total_actual_coordinates = k / 3
 					break
 				error = math.sqrt(((x - x_coord[0]) ** 2) + ((y - y_coord[0]) ** 2))
 				current_coord = (x, y)
@@ -78,18 +71,22 @@ def plot(m, val_x, val_y):
 				if error > largest_error:
 					largest_error = error
 			taken_coord.append(current_coord)
-			error_list.append(smallest_error)
+			if smallest_error == 100:
+				smallest_error = math.sqrt(((x - x_coord[0]) ** 2) + ((y - y_coord[0]) ** 2))
+			else:
+				error_list.append(smallest_error)
 			all_errors_list.append(smallest_error)
 			x_coord.append(nearest_x)
 			y_coord.append(nearest_y)
-			rgb = np.random.rand(3, )
-			plt.plot(x_coord, y_coord, color=rgb, marker='.')
-		# average = sum(error_list) / len(error_list)
-		# print('Largest error: {0}\nSmallest error: {1}\nAverage error: {2}\nActual Coordinates: {3}\n'.format(largest_error, smallest_error, average, total_actual_coordinates))
+			if x_coord[0] > 0.0001 and y_coord[0] > 0.0001:
+				plt.plot(x_coord, y_coord, color='blue', marker='.')
+				plt.plot(x_coord[1], y_coord[1], color='red', marker='.')
 		error_list.clear()
 		taken_coord.clear()
 
 		plt.title('Predicted Coordinate vs. Actual Coordinate\nTimestamp: {0}'.format(timestamps[i][0]))
+		plt.xlim(0, 1)
+		plt.ylim(0, 1)
 		plt.tight_layout()
 		# plt.show()
 		filename = 'PredictionsPlots/{0}.png'.format(i)
@@ -107,8 +104,8 @@ def plot(m, val_x, val_y):
 			image = imageio.imread(filename)
 			writer.append_data(image)
 
-	# for filename in set(filenames):
-	# 	os.remove(filename)
+	for filename in set(filenames):
+		os.remove(filename)
 
 
 def main():

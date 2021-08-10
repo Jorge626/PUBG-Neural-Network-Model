@@ -11,7 +11,7 @@ def get_bytes_list(network_traffic_file):
         byte_data = []
         timestamps = []
         for packet in data:
-            if int(packet['_source']['layers']['data']['data.len']) > 756:
+            if int(packet['_source']['layers']['data']['data.len']) > 756 or int(packet['_source']['layers']['data']['data.len']) < 100:
                 continue
             timestamp = packet['_source']['layers']['frame']['frame.time'][13:28]
             timestamps.append(timestamp)
