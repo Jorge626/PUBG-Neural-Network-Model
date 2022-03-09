@@ -1,4 +1,5 @@
 from chicken_dinner.pubgapi import PUBG
+import packet_sniffer
 import pubg_info
 import pubg_csv
 import pubg_plots
