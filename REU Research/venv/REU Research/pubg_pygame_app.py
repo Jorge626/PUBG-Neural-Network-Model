@@ -1,4 +1,4 @@
-import pygame, sys
+import pygame, sys, packet_sniffer, threading, model
 
 pygame.init()
 WINDOW = pygame.display.set_mode((1280, 720), pygame.RESIZABLE)
@@ -9,7 +9,7 @@ RED = (255, 0, 0)
 FPS = 60
 clock = pygame.time.Clock()
 red_dot = pygame.image.load('Assets/red-dot.jpg')
-red_dot = pygame.transform.scale(red_dot, (3, 3))
+red_dot = pygame.transform.scale(red_dot, (4, 4))
 
 
 class Button:
@@ -54,6 +54,8 @@ def main():
     #             running = False
     #     draw_window()
     # pygame.quit()
+    t1 = threading.Thread(target=packet_sniffer.main)
+    t1.start()
     menu()
 
 
@@ -87,6 +89,7 @@ def menu():
                    text_input="Taego", font=font, base_color=WHITE, hovering_color=GREEN)
         ]
 
+        packet_sniffer.coordinates
         WINDOW.blit(menu_text, menu_rect)
 
         for btn in map_btns:
