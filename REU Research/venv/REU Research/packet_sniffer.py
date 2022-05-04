@@ -26,8 +26,7 @@ def get_predictions(m):
     if packet[0].payload.src != local_ip:
         print("You received a packet!")
         data = packet[0].payload.payload.payload.load
-        # if 756 > len(data) > 100:
-        if len(data) > 0:
+        if 756 > len(data) > 100:
             byte_data = []
             for bits in data:
                 bit = float(bits)
@@ -42,7 +41,8 @@ def get_predictions(m):
             for i in range(0, len(prediction), 3):
                 x = prediction[i]
                 y = prediction[i + 1]
-                coordinates.append((x, y))
+                if x > 0.0001 and y > 0.0001:
+                    coordinates.append((x, y))
             return coordinates
     else:
         print("You sent a packet!")

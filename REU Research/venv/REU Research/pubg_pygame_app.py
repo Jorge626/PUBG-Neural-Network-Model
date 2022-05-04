@@ -122,9 +122,23 @@ def menu():
         pygame.display.update()
 
 
+def place_coordinates(previous_coordinates):
+    coordinates = packet_sniffer.coordinates
+    if coordinates is not None:
+        for coordinate in coordinates:
+            WINDOW.blit(red_dot, (coordinate[0] * 1280, coordinate[1] * 720))
+        return coordinates
+    else:
+        if previous_coordinates is not None:
+            for coordinate in previous_coordinates:
+                WINDOW.blit(red_dot, (coordinate[0] * 1280, coordinate[1] * 720))
+            return previous_coordinates
+
+
 def erangel():
     pygame.display.set_caption('PUBG Player Locator - Erangel')
     running = True
+    previous_coordinates = packet_sniffer.coordinates
     while running:
         erangel_mouse_pos = pygame.mouse.get_pos()
         WINDOW.fill(BLACK)
@@ -143,10 +157,8 @@ def erangel():
         change_map.change_color(erangel_mouse_pos)
         change_map.update(WINDOW)
 
-        WINDOW.blit(red_dot, (300, 200))
-        WINDOW.blit(red_dot, (300, 300))
-        WINDOW.blit(red_dot, (200, 300))
-        WINDOW.blit(red_dot, (200, 200))
+        previous_coordinates = place_coordinates(previous_coordinates)
+
         clock.tick(FPS)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -162,6 +174,7 @@ def erangel():
 def miramar():
     pygame.display.set_caption('PUBG Player Locator - Miramar')
     running = True
+    previous_coordinates = packet_sniffer.coordinates
     while running:
         miramar_mouse_pos = pygame.mouse.get_pos()
         WINDOW.fill(BLACK)
@@ -180,10 +193,8 @@ def miramar():
         change_map.change_color(miramar_mouse_pos)
         change_map.update(WINDOW)
 
-        WINDOW.blit(red_dot, (300, 200))
-        WINDOW.blit(red_dot, (300, 300))
-        WINDOW.blit(red_dot, (200, 300))
-        WINDOW.blit(red_dot, (200, 200))
+        previous_coordinates = place_coordinates(previous_coordinates)
+
         clock.tick(FPS)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -199,6 +210,7 @@ def miramar():
 def vikendi():
     pygame.display.set_caption('PUBG Player Locator - Vikendi')
     running = True
+    previous_coordinates = packet_sniffer.coordinates
     while running:
         vikendi_mouse_pos = pygame.mouse.get_pos()
         WINDOW.fill(BLACK)
@@ -217,6 +229,8 @@ def vikendi():
         change_map.change_color(vikendi_mouse_pos)
         change_map.update(WINDOW)
 
+        previous_coordinates = place_coordinates(previous_coordinates)
+
         clock.tick(FPS)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -232,6 +246,7 @@ def vikendi():
 def sanhok():
     pygame.display.set_caption('PUBG Player Locator - Sanhok')
     running = True
+    previous_coordinates = packet_sniffer.coordinates
     while running:
         sanhok_mouse_pos = pygame.mouse.get_pos()
         WINDOW.fill(BLACK)
@@ -250,6 +265,8 @@ def sanhok():
         change_map.change_color(sanhok_mouse_pos)
         change_map.update(WINDOW)
 
+        previous_coordinates = place_coordinates(previous_coordinates)
+
         clock.tick(FPS)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -265,6 +282,7 @@ def sanhok():
 def karakin():
     pygame.display.set_caption('PUBG Player Locator - Karakin')
     running = True
+    previous_coordinates = packet_sniffer.coordinates
     while running:
         karakin_mouse_pos = pygame.mouse.get_pos()
         WINDOW.fill(BLACK)
@@ -283,6 +301,8 @@ def karakin():
         change_map.change_color(karakin_mouse_pos)
         change_map.update(WINDOW)
 
+        previous_coordinates = place_coordinates(previous_coordinates)
+
         clock.tick(FPS)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -298,6 +318,7 @@ def karakin():
 def paramo():
     pygame.display.set_caption('PUBG Player Locator - Paramo')
     running = True
+    previous_coordinates = packet_sniffer.coordinates
     while running:
         paramo_mouse_pos = pygame.mouse.get_pos()
         WINDOW.fill(BLACK)
@@ -316,6 +337,8 @@ def paramo():
         change_map.change_color(paramo_mouse_pos)
         change_map.update(WINDOW)
 
+        previous_coordinates = place_coordinates(previous_coordinates)
+
         clock.tick(FPS)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -331,6 +354,7 @@ def paramo():
 def haven():
     pygame.display.set_caption('PUBG Player Locator - Haven')
     running = True
+    previous_coordinates = packet_sniffer.coordinates
     while running:
         haven_mouse_pos = pygame.mouse.get_pos()
         WINDOW.fill(BLACK)
@@ -349,6 +373,8 @@ def haven():
         change_map.change_color(haven_mouse_pos)
         change_map.update(WINDOW)
 
+        previous_coordinates = place_coordinates(previous_coordinates)
+
         clock.tick(FPS)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -364,6 +390,7 @@ def haven():
 def taego():
     pygame.display.set_caption('PUBG Player Locator - Taego')
     running = True
+    previous_coordinates = packet_sniffer.coordinates
     while running:
         taego_mouse_pos = pygame.mouse.get_pos()
         WINDOW.fill(BLACK)
@@ -381,6 +408,8 @@ def taego():
                             text_input="Change Map", font=font, base_color=WHITE, hovering_color=RED)
         change_map.change_color(taego_mouse_pos)
         change_map.update(WINDOW)
+
+        previous_coordinates = place_coordinates(previous_coordinates)
 
         clock.tick(FPS)
         for event in pygame.event.get():

@@ -3,111 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ea213969-aea1-4349-ad1e-43fb95536799" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/101.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/102.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/103.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/104.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/41.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/43.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/44.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/45.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/46.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/47.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/49.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/50.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/51.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/52.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/53.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/54.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/55.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/56.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/57.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/58.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/59.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/61.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/62.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/63.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/65.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/67.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/68.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/69.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/71.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/73.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/74.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/75.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/77.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/78.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/79.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/80.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/81.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/82.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/83.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/84.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/85.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/86.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/87.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/88.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/89.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/90.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/91.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/92.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/93.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/94.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/95.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/97.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/98.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/PredictionsPlots/99.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/packet_sniffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/packet_sniffer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/REU Research/venv/REU Research/pubg_pygame_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/REU Research/venv/REU Research/pubg_pygame_app.py" afterDir="false" />
     </list>
@@ -169,7 +65,7 @@
       <recent name="C:\Users\jorge\Documents\GitHub\REU_Project\REU Research\venv\REU Research" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pubg_pygame_app">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="REU_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -315,46 +211,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/pubg_tensors.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/main.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/preparedata.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/preparedata.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/preparedata.py</url>
-          <line>14</line>
-          <option name="timeStamp" value="110" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/preparedata.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/main.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="114" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/pubg_tensors.py</url>
-          <line>107</line>
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/trainmodel.py</url>
           <line>58</line>
           <option name="timeStamp" value="148" />
@@ -363,26 +219,6 @@
           <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/trainmodel.py</url>
           <line>123</line>
           <option name="timeStamp" value="149" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/pubg_tensors.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="150" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/pubg_tensors.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="151" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/packet_sniffer.py</url>
-          <line>40</line>
-          <option name="timeStamp" value="152" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/REU Research/venv/REU Research/packet_sniffer.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="155" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -400,6 +236,7 @@
         <watch expression="player_season.data.__len__()" />
         <watch expression="packet" />
         <watch expression="packet.aliastypes" />
+        <watch expression="x" />
       </configuration>
     </watches-manager>
   </component>
